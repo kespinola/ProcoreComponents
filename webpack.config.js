@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   output: {
-    library: 'ReactDataloader',
+    library: 'Proponents',
     libraryTarget: 'umd'
   },
 
@@ -23,6 +23,10 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },

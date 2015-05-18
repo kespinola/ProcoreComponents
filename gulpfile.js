@@ -4,7 +4,7 @@ var
   rename = require('gulp-rename'),
   webpack = require('gulp-webpack'),
   webpackServer = require('./webpack-server');
-  server = require('./server');
+
 
 var jsPath = "lib/entry.js";
 var jsOutName = "proponents.min.js";
@@ -12,7 +12,7 @@ var jsOutPath = "dist";
 var jsPublicPath = "public/assets/js";
 
 gulp.task('webpack-hot', webpackServer); 
-gulp.task('mockServer', server); 
+
 
 gulp.task('build_js', function() {
   return gulp.src(jsPath)
@@ -22,6 +22,6 @@ gulp.task('build_js', function() {
           .pipe(gulp.dest(jsPublicPath));
 });
 
-gulp.task('dev', ['webpack-hot', 'mockServer']); 
+gulp.task('dev', ['webpack-hot']); 
 
 gulp.task('default', ['build_js']);
