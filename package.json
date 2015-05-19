@@ -1,6 +1,6 @@
 {
   "name": "ProcoreComponents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Procore UI Components",
   "main": "./dist/proponents.min.js",
   "scripts": {
