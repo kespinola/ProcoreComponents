@@ -1,17 +1,21 @@
 <html>
   <header>
-    <link rel="stylesheet" href="http://localhost:8081/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="http://ude:3000/assets/vendor.css">
+    <link rel="stylesheet" type="text/css" href="http://ude:3000/assets/__v1/v1.css">
+    <link rel="stylesheet" type="text/css" href="http://ude:3000/assets/__wrench/wrench.css">
   </header>
   
   <body>
-    <div class="app"/>
+    <div id="app">
+    </div>
   </body>
 
   <script src="http://localhost:8080/assets/app.bundle.js"></script>
 
   <script>
     window.onload = function() {
-      window.renderApp();
+      var node = document.getElementById("app");
+      window.renderApp(node);
     };
   </script>
 
