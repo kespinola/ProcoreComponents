@@ -11,7 +11,7 @@ module.exports = {
 
   entry: {
     app: [
-      'webpack-dev-server/client?http://localhost:8080/',
+      'webpack-dev-server/client?http://ude:5050/',
       'webpack/hot/only-dev-server',
       './example.js'
     ]
@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: __dirname + '/public/assets/js',
-    publicPath: 'http://localhost:8080/assets'
+    publicPath: 'http://ude:5050/assets'
   },
 
   plugins: plugins,

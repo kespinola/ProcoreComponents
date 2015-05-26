@@ -35,16 +35,16 @@ module.exports = function() {
   var compiler = webpack(config);
 
   var server = new WebpackDevServer(compiler, {
-      contentBase: 'http://localhost:8080',
+      contentBase: 'http://ude:5050',
       hot: true,
       quiet: false,
       noInfo: false,
       lazy: false,
       watchDelay: 20,
-      publicPath: 'http://localhost:8080/assets',
+      publicPath: 'http://ude:5050/assets',
       stats: { colors: true },
   });
 
-  server.listen(8080, 'localhost', function() {});
-  app.listen(8081);
+  server.listen(5050, 'ude', function() {});
+  app.listen(5051);
 };
