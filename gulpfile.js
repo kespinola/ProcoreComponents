@@ -22,7 +22,7 @@ gulp.task('build_js', function() {
           .pipe(gulp.dest(jsPublicPath));
 });
 
-gulp.task('dev', ['webpack-hot']); 
+gulp.task('dev', ['webpack-hot', 'watch']); 
 
 gulp.task('watch', function() {
   gulp.watch('./lib/**/*.js', ['build_js']);
