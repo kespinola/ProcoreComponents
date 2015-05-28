@@ -24,7 +24,7 @@ gulp.task('build_js', function() {
 
 gulp.task('dev', ['webpack-hot', 'watch']); 
 
-gulp.task('watch', function() {
+gulp.task('watch', ['build_js'], function() {
   gulp.watch('./lib/**/*.js', ['build_js']);
 });
 
