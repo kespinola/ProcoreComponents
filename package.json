@@ -9,7 +9,9 @@
   },
   "author": "Me",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "superagent": ""
+  },
   "peerDependencies": {
     "react": "^0.13",
     "react-router": "^0.13",
