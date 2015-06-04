@@ -39,6 +39,7 @@
     "react-hot-loader": "^1.2.5",
     "react-router": "^0.13",
     "reflux": "^0.2.6",
+    "superagent": "^1.2.0",
     "underscore": "^1.7.0",
     "webpack": "^1.7.3",
     "webpack-dev-server": "^1.8.2"
