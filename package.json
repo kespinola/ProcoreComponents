@@ -10,7 +10,6 @@
   "author": "Me",
   "license": "ISC",
   "dependencies": {
-    "react-sortable-items": "0.0.7",
     "superagent": "^1.2.0"
   },
   "peerDependencies": {
