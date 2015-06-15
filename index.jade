@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        if(hostname == "ude")
+            link(rel="stylesheet", type="text/css", href="http://ude:5000/assets/vendor.css")
+            link(rel="stylesheet", type="text/css", href="http://udet:5000/assets/__v1/v1.css")
+            link(rel="stylesheets", type="text/css", href="http://ude:5000/assets/__wrench/wrench.css")
+    body
+        header
+        #app
+
+    script(src="http://#{hostname}:#{port}/assets/app.bundle.js")
+    script.
+        window.onload = function () {
+            var node = document.getElementById("app");
+            window.renderApp(node);
+        };
