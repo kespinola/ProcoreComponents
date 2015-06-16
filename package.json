@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "jade": "^1.11.0",
-    "react-sortable": "0.0.2",
     "react-sortable-mixin2": "0.0.6",
+    "sortablejs": "git+https://github.com/ksespinola/Sortable.git",
     "superagent": "^1.2.0"
   },
   "peerDependencies": {
