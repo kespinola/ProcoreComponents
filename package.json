@@ -12,6 +12,7 @@
   "dependencies": {
     "jade": "^1.11.0",
     "react-sortable": "0.0.2",
+    "react-sortable-mixin2": "0.0.6",
     "superagent": "^1.2.0"
   },
   "peerDependencies": {
