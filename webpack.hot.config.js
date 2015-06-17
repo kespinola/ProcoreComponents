@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var config = require('./config');
 
 var plugins = [
   new webpack.HotModuleReplacementPlugin(),
@@ -11,7 +12,7 @@ module.exports = {
 
   entry: {
     app: [
-      'webpack-dev-server/client?http://ude:5050/',
+      'webpack-dev-server/client?http://' + config.hostname + ':' + config.port,
       'webpack/hot/only-dev-server',
       './example.js'
     ]
@@ -20,7 +21,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: __dirname + '/public/assets/js',
-    publicPath: 'http://ude:5050/assets'
+    publicPath: 'http://' + config.hostname + ':' + config.port + '/assets'
   },
 
   plugins: plugins,

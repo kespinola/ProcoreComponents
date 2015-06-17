@@ -3,19 +3,24 @@ var WebpackDevServer = require('webpack-dev-server');
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
+var config = require('./config');
 
-var config = require('./webpack.hot.config');
+var hotConfig = require('./webpack.hot.config');
+
 module.exports = function() {
   var app = express();
+  app.set('view engine','jade');
   // Redirect all non existing files to index.html
   app.get('/', function(req, res) {
+
       var filename = path.join(__dirname, '/', 'public', req.url);
+
       if (fs.existsSync(filename)) {
         console.log('static: ', req.url);
         res.sendFile(filename);
       } else {
-        console.log('static: index.html (' + req.url + ')');
-        res.sendFile(path.join(__dirname, '/', 'public') + '/index.html');
+        console.log('static: index.jade (' + req.url + ')');
+        res.render('index',{hostname:config.hostname, port:config.port});
       }
   });
 
@@ -32,19 +37,17 @@ module.exports = function() {
 
   app.use(express.static('public'));
 
-  var compiler = webpack(config);
+  var compiler = webpack(hotConfig);
 
   var server = new WebpackDevServer(compiler, {
-      contentBase: 'http://ude:5050',
       hot: true,
       quiet: false,
       noInfo: false,
       lazy: false,
       watchDelay: 20,
-      publicPath: 'http://ude:5050/assets',
-      stats: { colors: true },
+      publicPath: '/assets/',
+      stats: { colors: true }
   });
 
-  server.listen(5050, 'ude', function() {});
-  app.listen(5051);
+  server.listen(config.port, config.hostname, function() {});
 };
