@@ -12,6 +12,7 @@
   "dependencies": {
     "jade": "^1.11.0",
     "react-sortable-mixin2": "0.0.6",
+    "react-window-mixins": "0.0.6",
     "sortablejs": "git+https://github.com/ksespinola/Sortable.git",
     "superagent": "^1.2.0"
   },
